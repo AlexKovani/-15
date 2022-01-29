@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    class ArithProgression
+    class ArithProgression: ISeries
     {
         int firstnum; // 1-й член прогрессии
         int d;  // разность прогрессии
@@ -18,7 +18,7 @@ namespace ConsoleApp2
         public int D { get { return d; } set { d = value; } }
         public int Num { get { return num; } set { num = value; } }
 
-        public ArithProgression(int firstnum, int d, int num)
+        public ArithProgression(int d, int num)
         {
             Firstnum = firstnum;
             D = d;
@@ -58,7 +58,7 @@ namespace ConsoleApp2
         }
     }
 
-    class Geomrogression
+    class Geomrogression: ISeries
     {
         int firstnum; // 1-й член прогрессии
         int q;  // знаменатель прогрессии
@@ -70,7 +70,7 @@ namespace ConsoleApp2
         public int Q { get { return q; } set { q = value; } }
         public int Num { get { return num; } set { num = value; } }
 
-        public Geomrogression(int firstnum, int q, int num)
+        public Geomrogression(int q, int num)
         {
             Firstnum = firstnum;
             Q = q;
